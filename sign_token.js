@@ -2,6 +2,7 @@
 const { randomUUID } = require('crypto');
 var jwt = require('jsonwebtoken');
 
+//Params to modify
 var private_key = 'MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg/mBtIv3o78n0nAzjDGbi1DaW110wewxKFnMMcHjjcbShRANCAATejRMXHahJmtE/YCHXZ6XEKx19pleJGOZqL/In0KVfBovvrDTVKUPqFyYpaFU/G1pm9SVEVTuHBgSntLyjZcW8'
 var client_id = 'a6baa4ac49ba4396bf95fd6d5ec0aeea'
 var client_key_id = '8572130a094945bbab10b07abc105a51'
@@ -9,6 +10,8 @@ var account_name = 'apizee-dev'
 var client_key_algorithm = 'ES256'
 var app_id = '77b1a16db7094531817378fa11fb17f5'
 var installation_id = '5db9802fd1b14fac8ce83a86141d535a'
+
+
 
 private_key = "-----BEGIN PRIVATE KEY-----\n" + private_key + "\n-----END PRIVATE KEY-----"
 
