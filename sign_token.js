@@ -3,13 +3,13 @@ const { randomUUID } = require('crypto');
 var jwt = require('jsonwebtoken');
 
 //Params to modify
-var private_key = 'MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg/mBtIv3o78n0nAzjDGbi1DaW110wewxKFnMMcHjjcbShRANCAATejRMXHahJmtE/YCHXZ6XEKx19pleJGOZqL/In0KVfBovvrDTVKUPqFyYpaFU/G1pm9SVEVTuHBgSntLyjZcW8'
-var client_id = 'a6baa4ac49ba4396bf95fd6d5ec0aeea'
-var client_key_id = '8572130a094945bbab10b07abc105a51'
+var private_key = 'MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgDqAnXVs0u9x1L3q7gwCS9f757Ip5UUejNQxaa6wsrhWhRANCAARWvGocvvc/on9YdOeG8vtMBGGUW/PVRmaWrJHvWPjZJs3BKOhiqIf0DZg1zA7RvEobshoCiAODOhj3Uy1c2T9s'
+var client_id = 'ed2e14f31ca343cd9e436db5c855f49b'
+var client_key_id = '9f8ab87cebcb4de29143549c71eed4b6'
 var account_name = 'apizee-dev'
 var client_key_algorithm = 'ES256'
 var app_id = '77b1a16db7094531817378fa11fb17f5'
-var installation_id = '5db9802fd1b14fac8ce83a86141d535a'
+var installation_id = '980c38e09c3845acbf5f7b8006c1db7c'
 
 
 
@@ -24,7 +24,7 @@ var payload = {
     sub: client_id,
     aud: 'https://' + account_name + '.talkdeskid.com/oauth/token',
     jti: randomUUID(),
-    exp: Math.floor(Date.now() / 1000) + 300,
+    exp: Math.floor((Date.now() + 30000) / 1000),
     iat: Math.floor(Date.now() / 1000)
 }
 
